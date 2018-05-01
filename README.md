@@ -8,11 +8,11 @@
 
 ## Overview
 
-This game was created for the Udacity Front End Developer Nanodegree. It is a clone of classic https://en.wikipedia.org/wiki/Concentration_(game).
+This game was created for the Udacity Front End Developer Nanodegree. It is a clone of classic <a href="https://en.wikipedia.org/wiki/Concentration_(game)">Concentration game</a>.
 
 ## How to Play
 
-At the begining of the game deck is randomly schuffed. Player can reveal the cards by clicking on the boxes. Two cards can be revealed by each turn. It the cards matches, the pair remains revealed. If the cards doesn't match the both cards are hiden. 
+At the begining of the game deck is randomly schuffled. Player can reveal the card by clicking on the box. Two cards can be revealed by each turn. It the cards matches, the pair remains revealed. If the cards doesn't match the both cards are hiden. Objective is to reveal all cards in the quickest time and less moves.
 
 ## Features
 
