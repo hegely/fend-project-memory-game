@@ -12,7 +12,7 @@ This game was created for the Udacity Front End Developer Nanodegree. It is a cl
 
 ## How to Play
 
-At the begining of the game deck is randomly schuffled. Player can reveal the card by clicking on the box. Two cards can be revealed by each turn. It the cards matches, the pair remains revealed. If the cards doesn't match the both cards are hiden. Objective is to reveal all cards in the quickest time and less moves.
+At the begining of the game deck is randomly schuffled. Player can reveal the card by clicking on the box. Two cards can be revealed by each turn. It the cards matches, the pair remains revealed. If the cards doesn't match the both cards are hiden. Objective is to reveal all cards in the quickest time and least moves.
 
 ## Features
 
