@@ -8,13 +8,19 @@ let openCards = [];
 let numMatches = 0;
 let moves = document.querySelector('.moves');
 let numMoves = 0;
-let numStars = 0;
+let numStars = 3;
 let star1 = document.querySelector('#star1');
 let star2 = document.querySelector('#star2');
 let star3 = document.querySelector('#star3');
 let restart = document.querySelector('.restart');
 let playAgain = document.querySelector('#play-again');
 let score = document.querySelector('#score');
+let timer = document.querySelector('#timer');
+let minutesLabel = document.querySelector('#minutes');
+let secondsLabel = document.querySelector('#seconds');
+let time = document.querySelector("#time");
+let totalSeconds = 0;
+let Interval = setInterval;
 
 /*
  * Display the cards on the page
@@ -104,6 +110,10 @@ function showCard(e) {
 			
 			//increment the move counter
 			addMove();
+			
+				if (numMoves == 1) {
+					Interval = setInterval(setTime, 1000);
+				}
 				
 			//increment the star rating
 			addStar();
@@ -121,19 +131,17 @@ function addMove () {
 
 function addStar () {
 	
-    if (numMoves >= 10) {
+    if (numMoves >= 10 && numMoves < 20) {
         star3.classList.remove('fa-star'); 
 		star3.classList.add('fa-star-o');
-		numStars = 3;
+		numStars = 2;
     } 
-    if (numMoves >= 20) {
+    if (numMoves >= 20 && numMoves < 30) {
         star2.classList.remove('fa-star'); 
 		star2.classList.add('fa-star-o');
-		numStars = 2;
+		numStars = 1;
     }
     if (numMoves >= 30) {
-        star1.classList.remove('fa-star'); 
-		star1.classList.add('fa-star-o');
 		numStars = 1;
     }
 	
@@ -174,19 +182,25 @@ function restartGame() {
     displayCards();
     openCards = [];
     numMoves = 0;
+	numStars = 3;
 	moves.textContent = numMoves;
     numMatches = 0;
-    star1.classList.remove('fa-star-o'); 
-	star1.classList.add('fa-star'); 
     star2.classList.remove('fa-star-o'); 
 	star2.classList.add('fa-star'); 
     star3.classList.remove('fa-star-o'); 
-	star3.classList.add('fa-star'); 
+	star3.classList.add('fa-star');
+	clearInterval(Interval);
+	totalSeconds = 0;
+    secondsLabel.innerText = '00';
+    minutesLabel.innerText = '00';
+	
 };
 
 function callWin () {
+	clearInterval(Interval);
     win.style.display = 'block';
     score.textContent = 'With ' + numMoves + ' Moves and ' +  numStars + ' Stars'
+	time.innerHTML = 'Elapsed time: ' + minutesLabel.innerHTML + ':' +  secondsLabel.innerHTML;
 }
 
 //play again
@@ -195,4 +209,19 @@ playAgain.addEventListener('click', startOver);
 function startOver () {
     restartGame();
     win.style.display = 'none';
+}
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + '';
+  if (valString.length < 2) {
+    return '0' + valString;
+  } else {
+    return valString;
+  }
 }
