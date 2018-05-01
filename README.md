@@ -8,7 +8,7 @@
 
 ## Overview
 
-This game was created for the Udacity Front End Developer Nanodegree. It is a clone of classic <a href="https://en.wikipedia.org/wiki/Concentration_(game)">Concentration game</a>.
+This game was created for the Udacity Front End Developer Nanodegree. It is a clone of classic <a target="_blank" href="https://en.wikipedia.org/wiki/Concentration_(game)">Concentration game</a>.
 
 ## How to Play
 
