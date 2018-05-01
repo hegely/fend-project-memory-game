@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-* [Overview](#Overview)
-* [How to Play](#How to Play)
-* [Features](#Features)
+* [Overview](#overview)
+* [How to Play](#how-to-play)
+* [Features](#features)
 
 ## Overview
 
