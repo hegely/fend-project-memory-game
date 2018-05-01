@@ -2,19 +2,18 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* [Overview](#overview)
+* [How to Play](#how-to-play)
+* [Features](#features)
 
-## Instructions
+## Overview
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+This game was created for the Udacity Front End Developer Nanodegree. It is a clone of classic <a target="_blank" href="https://en.wikipedia.org/wiki/Concentration_(game)">Concentration game</a>.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## How to Play
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+At the begining of the game deck is randomly schuffled. Player can reveal the card by clicking on the box. Two cards can be revealed by each turn. It the cards matches, the pair remains revealed. If the cards doesn't match the both cards are hiden. Objective is to reveal all cards in the quickest time and least moves.
 
-## Contributing
+## Features
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+The game includes Timer, which counts the elapsed time from the begining of first turn. It also includes counter of moves and the star rating.
